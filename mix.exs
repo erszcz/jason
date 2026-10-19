@@ -30,6 +30,12 @@ defmodule Jason.Mixfile do
     [
       {:decimal, "~> 1.0 or ~> 2.0 or ~> 3.0", optional: true},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:eqwalizer_support,
+       git: "https://github.com/erszcz/erlang-language-platform.git",
+       sparse: "eqwalizer/eqwalizer_support",
+       branch: "dev",
+       only: :dev,
+       runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
     ] ++ maybe_stream_data()
   end
